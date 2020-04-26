@@ -1,5 +1,5 @@
 <div class="card-columns m-5">
-    <div class="card" *ngFor="let item of items">
+    <div class="card puntero" *ngFor="let item of items" (click)="verArtista(item)">
         <img class="card-img-top" alt="nuevoAlbum" [src]="item.images | noimage">
         <div class="card-body">
             <h5 class="card-title">

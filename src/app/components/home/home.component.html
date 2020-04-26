@@ -1,1 +1,10 @@
-<app-tarjetas [items]="nuevosAlbumes"></app-tarjetas>
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="alert alert-danger animated fadeIn" *ngIf="alertaError">
+    <h3>Error</h3>
+    <p>
+        Ocurrio un error: {{ alertaError }}
+    </p>
+</div>
+
+<app-tarjetas *ngIf="!loading" [items]="nuevosAlbumes"></app-tarjetas>
